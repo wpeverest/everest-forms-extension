@@ -37,7 +37,7 @@ final class EverestForms_Extension {
 		add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
 
 		// Checks with Everest Forms is installed.
-		if ( defined( 'EVF_VERSION' ) && version_compare( EVF_VERSION, '1.1', '>=' ) ) {
+		if ( defined( 'EVF_VERSION' ) && version_compare( EVF_VERSION, '1.2', '>=' ) ) {
 			$this->includes();
 		} else {
 			add_action( 'admin_notices', array( $this, 'everest_forms_missing_notice' ) );

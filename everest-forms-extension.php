@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Everest Forms Extension
+ * Plugin Name: Everest Forms - Extension
  * Plugin URI: https://gitlab.com/wpeverest/everest-forms-extension
  * Description: Everest Forms extension boilerplate.
  * Version: 1.0.0
@@ -14,7 +14,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-// Define EFP_PLUGIN_FILE.
+// Define EVF_EXTENSION_PLUGIN_FILE.
 if ( ! defined( 'EVF_EXTENSION_PLUGIN_FILE' ) ) {
 	define( 'EVF_EXTENSION_PLUGIN_FILE', __FILE__ );
 }
