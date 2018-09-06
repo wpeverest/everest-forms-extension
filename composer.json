@@ -1,6 +1,6 @@
 {
   "name": "wpeverest/everest-forms-extension",
-  "description": "Everest Forms - Extension.",
+  "description": "Everest Forms extension boilerplate.",
   "homepage": "https://wpeverest.com/wordpress-plugins/everest-forms/everest-forms-extension/",
   "type": "wordpress-plugin",
   "license": "GPL-3.0-or-later",
