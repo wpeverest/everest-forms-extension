@@ -39,6 +39,9 @@ final class EverestForms_Extension {
 		// Checks with Everest Forms Pro is installed.
 		if ( defined( 'EFP_VERSION' ) && version_compare( EFP_VERSION, '1.0', '>=' ) ) {
 			$this->includes();
+
+			// Hooks.
+			add_action( 'everest_forms_loaded', array( $this, 'plugin_updater' ) );
 		} else {
 			add_action( 'admin_notices', array( $this, 'everest_forms_pro_missing_notice' ) );
 		}
@@ -77,6 +80,15 @@ final class EverestForms_Extension {
 	 * Includes.
 	 */
 	private function includes() {}
+
+	/**
+	 * Plugin Updater.
+	 */
+	public function plugin_updater() {
+		if ( function_exists( 'evf_addon_updater' ) ) {
+			evf_addon_updater( EVF_EXTENSION_PLUGIN_FILE, 34, self::VERSION );
+		}
+	}
 
 	/**
 	 * Everest Forms Pro fallback notice.
