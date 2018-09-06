@@ -95,6 +95,6 @@ final class EverestForms_Extension {
 	 */
 	public function everest_forms_pro_missing_notice() {
 		/* translators: %s: everest-forms-pro version */
-		echo '<div class="error notice is-dismissible"><p>' . sprintf( esc_html__( 'Everest Forms Extension depends on the last version of %s or later to work!', 'everest-forms-extension' ), '<a href="https://wpeverest.com/wordpress-plugins/everest-forms-pro/" target="_blank">' . esc_html__( 'Everest Forms Pro 1.1', 'everest-forms-extension' ) . '</a>' ) . '</p></div>';
+		echo '<div class="error notice is-dismissible"><p>' . sprintf( esc_html__( 'Everest Forms Extension depends on the last version of %s or later to work!', 'everest-forms-extension' ), '<a href="https://wpeverest.com/wordpress-plugins/everest-forms/" target="_blank">' . esc_html__( 'Everest Forms Pro 1.0', 'everest-forms-extension' ) . '</a>' ) . '</p></div>';
 	}
 }
