@@ -21,7 +21,7 @@ if ( ! defined( 'EVF_EXTENSION_PLUGIN_FILE' ) ) {
 
 // Include the main EverestForms_Extension class.
 if ( ! class_exists( 'EverestForms_Extension' ) ) {
-	include_once dirname( __FILE__ ) . '/includes/class-everestforms-extension.php';
+	include_once dirname( __FILE__ ) . '/includes/class-everest-forms-extension.php';
 }
 
 // Initialize the plugin.

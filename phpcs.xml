@@ -26,7 +26,6 @@
 		<exclude name="WordPress.VIP.DirectDatabaseQuery.SchemaChange" />
 		<exclude name="WordPress.VIP.FileSystemWritesDisallow.file_ops_fwrite" />
 		<exclude name="WordPress.VIP.RestrictedFunctions" />
-		<exclude name="WordPress.VIP.SlowDBQuery.slow_db_query_meta_query" />
 		<exclude name="WordPress.VIP.RestrictedVariables.user_meta__wpdb__usermeta" />
 		<exclude name="WordPress.VIP.RestrictedVariables.cache_constraints___COOKIE" />
 	</rule>
@@ -39,6 +38,9 @@
 		<properties>
 			<property name="customEscapingFunctions" type="array" value="evf_help_tip,evf_sanitize_tooltip,evf_selected" />
 		</properties>
+	</rule>
+	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
+		<exclude-pattern>includes/class-everest-forms-extension.php</exclude-pattern>
 	</rule>
 	<rule ref="WordPress.WP.I18n">
 		<properties>
