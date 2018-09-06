@@ -155,6 +155,23 @@ module.exports = function( grunt ){
 			}
 		},
 
+		// Add Textdomain.
+		addtextdomain: {
+			options: {
+				textdomain: '<%= pkg.name %>',
+				updateDomains: ['everest-forms']
+			},
+			target: {
+				files: {
+					src: [
+						'**/*.php',         // Include all files
+						'!node_modules/**', // Exclude node_modules/
+						'!vendor/**'        // Exclude vendor/
+					]
+				}
+			}
+		},
+
 		// Check textdomain errors.
 		checktextdomain: {
 			options: {
