@@ -19,7 +19,11 @@ module.exports = function( grunt ){
 				jshintrc: '.jshintrc'
 			},
 			all: [
-				'Gruntfile.js'
+				'Gruntfile.js',
+				'<%= dirs.js %>/admin/*.js',
+				'!<%= dirs.js %>/admin/*.min.js',
+				'<%= dirs.js %>/frontend/*.js',
+				'!<%= dirs.js %>/frontend/*.min.js'
 			]
 		},
 
@@ -73,7 +77,8 @@ module.exports = function( grunt ){
 		// Compile all .scss files.
 		sass: {
 			options: {
-				sourcemap: 'none'
+				sourcemap: 'none',
+				implementation: require( 'node-sass' )
 			},
 			compile: {
 				files: [{
@@ -115,10 +120,9 @@ module.exports = function( grunt ){
 		watch: {
 			css: {
 				files: [
-					'<%= dirs.css %>/*.scss',
-					'<%= dirs.css %>/**/*.scss'
+					'<%= dirs.css %>/*.scss'
 				],
-				tasks: ['sass', 'rtlcss', 'cssmin']
+				tasks: ['sass', 'rtlcss', 'postcss', 'cssmin']
 			},
 			js: {
 				files: [

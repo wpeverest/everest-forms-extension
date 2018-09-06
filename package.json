@@ -2,7 +2,7 @@
   "name": "everest-forms-extension",
   "title": "Everest Forms Extension",
   "version": "1.0.0",
-  "homepage": "https://wpeverest.com/plugins/everest-forms-extension/",
+  "homepage": "https://wpeverest.com/wordpress-plugins/everest-forms/everest-forms-extension/",
   "repository": {
     "type": "git",
     "url": "https://gitlab.com/wpeverest/everest-forms-extension.git"
@@ -10,21 +10,22 @@
   "license": "GPL-3.0+",
   "main": "Gruntfile.js",
   "devDependencies": {
-    "autoprefixer": "~8.2.0",
-    "grunt": "~1.0.2",
+    "autoprefixer": "~9.1.5",
+    "grunt": "~1.0.3",
     "grunt-checktextdomain": "~1.0.1",
     "grunt-contrib-compress": "~1.4.3",
     "grunt-contrib-cssmin": "~2.2.1",
     "grunt-contrib-jshint": "~1.1.0",
-    "grunt-contrib-uglify": "~3.3.0",
-    "grunt-contrib-watch": "~1.0.0",
+    "grunt-contrib-uglify": "~4.0.0",
+    "grunt-contrib-watch": "~1.1.0",
     "grunt-phpcs": "~0.4.0",
     "grunt-postcss": "~0.9.0",
     "grunt-rtlcss": "~2.0.1",
-    "grunt-sass": "~2.1.0",
-    "grunt-stylelint": "~0.10.0",
+    "grunt-sass": "~3.0.1",
+    "grunt-stylelint": "~0.10.1",
     "grunt-wp-i18n": "~1.0.2",
-    "stylelint": "~9.2.0"
+    "node-sass": "~4.9.3",
+    "stylelint": "~9.5.0"
   },
   "engines": {
     "node": ">=8.9.3",
