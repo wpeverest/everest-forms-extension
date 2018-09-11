@@ -2,7 +2,7 @@
   "name": "everest-forms-extension",
   "title": "Everest Forms - Extension",
   "version": "1.0.0",
-  "homepage": "https://wpeverest.com/wordpress-plugins/everest-forms/everest-forms-extension/",
+  "homepage": "https://wpeverest.com/wordpress-plugins/everest-forms/extension/",
   "repository": {
     "type": "git",
     "url": "https://gitlab.com/wpeverest/everest-forms-extension.git"
@@ -14,7 +14,7 @@
     "grunt": "~1.0.3",
     "grunt-checktextdomain": "~1.0.1",
     "grunt-contrib-compress": "~1.4.3",
-    "grunt-contrib-cssmin": "~2.2.1",
+    "grunt-contrib-cssmin": "~3.0.0",
     "grunt-contrib-jshint": "~1.1.0",
     "grunt-contrib-uglify": "~4.0.0",
     "grunt-contrib-watch": "~1.1.0",

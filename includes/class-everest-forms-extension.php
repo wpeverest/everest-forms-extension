@@ -41,7 +41,7 @@ final class EverestForms_Extension {
 			$this->includes();
 
 			// Hooks.
-			add_action( 'everest_forms_loaded', array( $this, 'plugin_updater' ) );
+			add_action( 'everest_forms_init', array( $this, 'plugin_updater' ) );
 		} else {
 			add_action( 'admin_notices', array( $this, 'everest_forms_pro_missing_notice' ) );
 		}
@@ -85,8 +85,8 @@ final class EverestForms_Extension {
 	 * Plugin Updater.
 	 */
 	public function plugin_updater() {
-		if ( function_exists( 'evf_addon_updater' ) ) {
-			evf_addon_updater( EVF_EXTENSION_PLUGIN_FILE, 34, self::VERSION );
+		if ( class_exists( 'EVF_Plugin_Updater' ) ) {
+			return EVF_Plugin_Updater::updates( EVF_EXTENSION_PLUGIN_FILE, 00, self::VERSION );
 		}
 	}
 
@@ -95,6 +95,6 @@ final class EverestForms_Extension {
 	 */
 	public function everest_forms_pro_missing_notice() {
 		/* translators: %s: everest-forms-pro version */
-		echo '<div class="error notice is-dismissible"><p>' . sprintf( esc_html__( 'Everest Forms Extension depends on the last version of %s or later to work!', 'everest-forms-extension' ), '<a href="https://wpeverest.com/wordpress-plugins/everest-forms/" target="_blank">' . esc_html__( 'Everest Forms Pro 1.0', 'everest-forms-extension' ) . '</a>' ) . '</p></div>';
+		echo '<div class="error notice is-dismissible"><p>' . sprintf( esc_html__( 'Everest Forms Extension depends on the last version of %s or later to work!', 'everest-forms-extension' ), '<a href="https://wpeverest.com/wordpress-plugins/everest-forms/" target="_blank">' . esc_html__( 'Everest Forms Pro 1.x', 'everest-forms-extension' ) . '</a>' ) . '</p></div>';
 	}
 }
