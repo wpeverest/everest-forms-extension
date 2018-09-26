@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Everest Forms - Extension
- * Plugin URI: https://gitlab.com/wpeverest/everest-forms-extension/
+ * Plugin URI: https://wpeverest.com/wordpress-plugins/everest-forms/extension/
  * Description: Everest Forms extension boilerplate.
  * Version: 1.0.0
  * Author: WPEverest
