@@ -8,8 +8,8 @@
  * Author URI: https://wpeverest.com
  * Text Domain: everest-forms-extension
  * Domain Path: /languages/
- * EVF requires at least: 1.3.0
- * EVF tested up to: 1.3.0
+ * EVF requires at least: 1.4.0
+ * EVF tested up to: 1.4.0
  *
  * @package EverestForms_Extension
  */
