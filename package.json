@@ -9,8 +9,13 @@
   },
   "license": "GPL-3.0+",
   "main": "Gruntfile.js",
+  "scripts": {
+    "lint:js": "eslint assets/js --ext=js",
+    "git:update-hooks": "rm -r .git/hooks && node ./node_modules/husky/husky.js install"
+  },
   "devDependencies": {
-    "autoprefixer": "~9.4.3",
+    "autoprefixer": "~9.4.5",
+    "eslint": "~5.12.1",
     "grunt": "~1.0.3",
     "grunt-checktextdomain": "~1.0.1",
     "grunt-contrib-compress": "~1.4.3",
@@ -23,12 +28,38 @@
     "grunt-rtlcss": "~2.0.1",
     "grunt-sass": "~3.0.2",
     "grunt-stylelint": "~0.10.1",
-    "grunt-wp-i18n": "~1.0.2",
+    "grunt-wp-i18n": "~1.0.3",
     "node-sass": "~4.11.0",
-    "stylelint": "~9.9.0"
+    "stylelint": "~9.10.1",
+    "stylelint-config-wordpress": "~13.1.0"
   },
   "engines": {
     "node": ">=8.9.3",
     "npm": ">=5.5.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.php": [
+        "php -d display_errors=1 -l",
+        "composer run-script phpcs-pre-commit"
+      ],
+      "*.scss": [
+        "stylelint --syntax=scss --fix",
+        "git add"
+      ],
+      "*.js": [
+        "eslint --fix",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "*.min.js",
+      "*.css"
+    ]
   }
 }
