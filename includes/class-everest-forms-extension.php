@@ -37,7 +37,7 @@ final class EverestForms_Extension {
 		add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
 
 		// Checks with Everest Forms Pro is installed.
-		if ( defined( 'EFP_VERSION' ) && version_compare( EFP_VERSION, '1.0', '>=' ) ) {
+		if ( defined( 'EFP_VERSION' ) && version_compare( EFP_VERSION, '1.4.5', '>=' ) ) {
 			$this->includes();
 
 			// Hooks.
@@ -95,6 +95,6 @@ final class EverestForms_Extension {
 	 */
 	public function everest_forms_pro_missing_notice() {
 		/* translators: %s: everest-forms-pro version */
-		echo '<div class="error notice is-dismissible"><p>' . sprintf( esc_html__( 'Everest Forms Extension depends on the last version of %s or later to work!', 'everest-forms-extension' ), '<a href="https://wpeverest.com/wordpress-plugins/everest-forms/" target="_blank">' . esc_html__( 'Everest Forms Pro 1.x', 'everest-forms-extension' ) . '</a>' ) . '</p></div>';
+		echo '<div class="error notice is-dismissible"><p>' . sprintf( esc_html__( 'Everest Forms Extension depends on the last version of %s or later to work!', 'everest-forms-extension' ), '<a href="https://wpeverest.com/wordpress-plugins/everest-forms/" target="_blank">' . esc_html__( 'Everest Forms Pro 1.4.5', 'everest-forms-extension' ) . '</a>' ) . '</p></div>';
 	}
 }
